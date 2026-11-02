@@ -1,0 +1,120 @@
+
+{
+  "personalInfo": {
+    "name": "Avnish Pandey",
+    "firstName": "Avnish",
+    "lastName": "Pandey",
+    "role": "Frontend Developer",
+    "logo": "AP",
+    "intro": "Hello, I'm",
+    "description": "I create modern, responsive and user-friendly websites using HTML, CSS, JavaScript, React and SASS.",
+    "resume": "/resume.pdf"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "#home"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "about": {
+    "title": "About Me",
+    "description": "I am a frontend developer interested in creating clean, attractive and responsive websites. I enjoy learning new technologies and improving my web development skills.",
+    "education": "B.Tech",
+    "specialization": "Web Development"
+  },
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Intermediate"
+    },
+    {
+      "name": "CSS",
+      "level": "Intermediate"
+    },
+    {
+      "name": "JavaScript",
+      "level": "Beginner"
+    },
+    {
+      "name": "React JS",
+      "level": "Beginner"
+    },
+    {
+      "name": "SASS",
+      "level": "Beginner"
+    },
+    {
+      "name": "Git and GitHub",
+      "level": "Beginner"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portfolio Website",
+      "description": "A responsive personal portfolio website built using React JS and SASS, with dark and light themes.",
+      "technologies": [
+        "React",
+        "SASS",
+        "JavaScript"
+      ],
+      "demoLink": "",
+      "githubLink": ""
+    },
+    {
+      "id": 2,
+      "title": "Myntra Clone",
+      "description": "A shopping website interface inspired by Myntra, created to practice HTML and CSS.",
+      "technologies": [
+        "HTML",
+        "CSS"
+      ],
+      "demoLink": "",
+      "githubLink": ""
+    },
+    {
+      "id": 3,
+      "title": "Exam Paper Security System",
+      "description": "An academic project exploring the use of Python and blockchain to improve exam paper security.",
+      "technologies": [
+        "Python",
+        "Blockchain"
+      ],
+      "demoLink": "",
+      "githubLink": ""
+    }
+  ],
+  "contact": {
+    "email": "",
+    "phone": "",
+    "location": "India",
+    "github": "",
+    "linkedin": ""
+  },
+  "footer": {
+    "text": "Designed and developed by Avnish Pandey.",
+    "copyright": "© 2026 Avnish Pandey. All rights reserved."
+  },
+  "theme": {
+    "default": "dark",
+    "primaryColor": "#38bdf8",
+    "darkBackground": "#0f172a",
+    "lightBackground": "#f8fafc"
+  }
+}

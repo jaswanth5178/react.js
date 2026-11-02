@@ -1,0 +1,30 @@
+{
+  "user": [
+    {
+      "name": "Jaswanth Pattupogula",
+      "age": "23",
+      "id": "1_qyVWy9kco"
+    },
+    {
+      "name": "Srinu Pothala",
+      "age": "22",
+      "id": "JPFEp8Q7BO4"
+    },
+    {
+      "name": "Vishnu",
+      "age": "23",
+      "id": "h4aAI6Yu4AI"
+    },
+    {
+      "name": "Hammu",
+      "age": "28",
+      "id": "04LHmU1E-pA"
+    },
+    {
+      "name": "Azfar",
+      "age": "23",
+      "id": "5ssP1Wb6OFw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

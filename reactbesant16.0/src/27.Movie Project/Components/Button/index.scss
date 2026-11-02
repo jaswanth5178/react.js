@@ -1,0 +1,41 @@
+$primary-color: #e50914;
+$hover-color: #b20710;
+$text-color: #ffffff;
+$disabled-color: #6b7280;
+
+.custom-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: $primary-color;
+  color: $text-color;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  // Hover effect
+  &:hover:not(:disabled) {
+    background: $hover-color;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(229, 9, 20, 0.3);
+  }
+  // Click effect
+  &:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+  // Keyboard focus
+  &:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+  }
+  // Disabled state
+  &:disabled {
+    background: $disabled-color;
+    color: #d1d5db;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+    transform: none;
+  }
+}

@@ -1,0 +1,1304 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+.dark-theme {
+  min-height: 100vh;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+
+
+  /* ---------------- NAVBAR ---------------- */
+
+  .navbar {
+    background: rgba(15, 23, 42, 0.95);
+
+    border-bottom: 1px solid
+      rgba(255, 255, 255, 0.08);
+
+    transition: 0.5s;
+
+
+    .logo {
+      color: #38bdf8;
+    }
+
+
+    nav button {
+      color: #ffffff;
+
+      &:hover {
+        color: #38bdf8;
+      }
+    }
+  }
+
+
+  /* ---------------- HOME ---------------- */
+
+  .home {
+    background: #0f172a;
+  }
+
+
+  /* ---------------- ABOUT ---------------- */
+
+  .about {
+    background: #111827;
+  }
+
+
+  /* ---------------- SKILLS ---------------- */
+
+  .skills {
+    background: #0f172a;
+  }
+
+
+  /* ---------------- PROJECTS ---------------- */
+
+  .projects {
+    background: #111827;
+  }
+
+
+  /* ---------------- CONTACT ---------------- */
+
+  .contact {
+    background: #0f172a;
+  }
+
+
+  /* ---------------- CARDS ---------------- */
+
+  .skill-card,
+  .detail-box,
+  .project-card {
+    background: #1e293b;
+  }
+
+
+  /* ---------------- FOOTER ---------------- */
+
+  .footer {
+    background: #020617;
+
+    h3 {
+      color: #38bdf8;
+    }
+
+    p {
+      color: #94a3b8;
+    }
+  }
+
+
+  /* ---------------- AP CIRCLE ---------------- */
+
+  .profile-circle {
+    background: linear-gradient(
+      135deg,
+      #38bdf8,
+      #2563eb
+    );
+
+    box-shadow:
+      0 0 35px
+      rgba(56, 189, 248, 0.25);
+
+
+    .profile-text {
+      color: #38bdf8;
+    }
+
+
+    &::before {
+      background: #0f172a;
+    }
+  }
+}
+
+
+/* =========================================================
+   LIGHT THEME
+========================================================= */
+
+.light-theme {
+  min-height: 100vh;
+
+  background: #f8fafc;
+  color: #0f172a;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+
+
+  /* ---------------- NAVBAR ---------------- */
+
+  .navbar {
+    background: rgba(255, 255, 255, 0.95);
+
+    border-bottom: 1px solid #e2e8f0;
+
+    transition: 0.5s;
+
+
+    .logo {
+      color: #0f172a;
+    }
+
+
+    nav button {
+      color: #0f172a;
+
+      &:hover {
+        color: #2563eb;
+      }
+    }
+  }
+
+
+  /* ---------------- HOME ---------------- */
+
+  .home {
+    background: #ffffff;
+  }
+
+
+  /* ---------------- ABOUT ---------------- */
+
+  .about {
+    background: #f1f5f9;
+  }
+
+
+  /* ---------------- SKILLS ---------------- */
+
+  .skills {
+    background: #ffffff;
+  }
+
+
+  /* ---------------- PROJECTS ---------------- */
+
+  .projects {
+    background: #f1f5f9;
+  }
+
+
+  /* ---------------- CONTACT ---------------- */
+
+  .contact {
+    background: #ffffff;
+  }
+
+
+  /* ---------------- CARDS ---------------- */
+
+  .skill-card,
+  .detail-box,
+  .project-card {
+    background: #ffffff;
+
+    box-shadow:
+      0 10px 30px
+      rgba(0, 0, 0, 0.08);
+  }
+
+
+  /* ---------------- FOOTER ---------------- */
+
+  .footer {
+    background: #e2e8f0;
+
+    h3 {
+      color: #2563eb;
+    }
+
+    p {
+      color: #475569;
+    }
+  }
+
+
+  /* ---------------- AP CIRCLE ---------------- */
+
+  .profile-circle {
+    background: linear-gradient(
+      135deg,
+      #38bdf8,
+      #2563eb
+    );
+
+    box-shadow:
+      0 0 35px
+      rgba(56, 189, 248, 0.35);
+
+
+    .profile-text {
+      color: #2563eb;
+    }
+
+
+    &::before {
+      background: #ffffff;
+    }
+  }
+
+
+  /* ---------------- CONTACT FORM ---------------- */
+
+  .contact-form {
+
+    input,
+    textarea {
+      background: #ffffff;
+
+      color: #0f172a;
+
+      border-color: #cbd5e1;
+    }
+  }
+
+
+  /* ---------------- TECHNOLOGY TAGS ---------------- */
+
+  .project-tech {
+
+    span {
+      background: #e2e8f0;
+
+      color: #334155;
+    }
+  }
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  height: 75px;
+
+  padding: 0 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    background 0.5s ease,
+    border 0.5s ease;
+
+
+  /* ---------------- LOGO ---------------- */
+
+  .logo {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+
+
+  /* ---------------- NAV ---------------- */
+
+  nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+
+    button {
+      position: relative;
+
+      border: none;
+
+      background: transparent;
+
+      padding: 10px 15px;
+
+      font-size: 16px;
+
+      font-weight: 500;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+
+      /* Underline */
+
+      &::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+
+        bottom: 2px;
+
+        width: 0;
+
+        height: 2px;
+
+        background: currentColor;
+
+        transform: translateX(-50%);
+
+        transition: width 0.3s ease;
+      }
+
+
+      &:hover::after {
+        width: 80%;
+      }
+
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+
+/* =========================================================
+   HOME
+========================================================= */
+
+.home {
+  min-height: 100vh;
+
+  padding: 120px 8% 80px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+
+/* =========================================================
+   HOME CONTENT
+========================================================= */
+
+.home-content {
+  max-width: 650px;
+
+
+  .small-text {
+    color: #38bdf8;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+  }
+
+
+  h1 {
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+
+
+    span {
+      color: #38bdf8;
+    }
+  }
+
+
+  h2 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .home-description {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+
+    color: #94a3b8;
+  }
+}
+
+
+/* =========================================================
+   LIGHT MODE HOME TEXT
+========================================================= */
+
+.light-theme {
+
+  .home-content {
+
+    h2 {
+      color: #334155;
+    }
+
+    .home-description {
+      color: #64748b;
+    }
+  }
+}
+
+
+/* =========================================================
+   HOME BUTTONS
+========================================================= */
+
+.home-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+
+.btn {
+  display: inline-block;
+
+  padding: 13px 25px;
+
+  border-radius: 6px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* ---------------- PRIMARY ---------------- */
+
+.primary-btn {
+  background: #38bdf8;
+
+  color: #0f172a;
+
+
+  &:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 10px 25px
+      rgba(56, 189, 248, 0.3);
+  }
+
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+
+/* ---------------- SECONDARY ---------------- */
+
+.secondary-btn {
+  color: #38bdf8;
+
+  border: 1px solid #38bdf8;
+
+
+  &:hover {
+    background: #38bdf8;
+
+    color: #0f172a;
+
+    transform: translateY(-3px);
+  }
+
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+
+/* =========================================================
+   AP CIRCLE
+========================================================= */
+
+.home-image {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   AP CIRCLE = THEME BUTTON
+========================================================= */
+
+.profile-circle {
+  width: 350px;
+
+  height: 350px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  padding: 0;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+
+
+  /* Hover */
+
+  &:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+      0 0 45px
+      rgba(56, 189, 248, 0.6);
+  }
+
+
+  /* Click */
+
+  &:active {
+    transform: scale(0.94);
+  }
+
+
+  /* Inner circle */
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    border-radius: 50%;
+
+    transition:
+      background 0.5s ease;
+  }
+}
+
+
+/* =========================================================
+   AP TEXT
+========================================================= */
+
+.profile-text {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 100px;
+
+  font-weight: 700;
+
+  transition:
+    color 0.5s ease;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+  padding: 100px 8%;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 60px;
+
+
+  p {
+    color: #38bdf8;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+  }
+
+
+  h2 {
+    font-size: 45px;
+
+
+    span {
+      color: #38bdf8;
+    }
+  }
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-content {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+}
+
+
+.about-card {
+
+  h3 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+  }
+
+
+  p {
+    color: #94a3b8;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+  }
+}
+
+
+/* =========================================================
+   ABOUT DETAILS
+========================================================= */
+
+.about-details {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+.detail-box {
+  padding: 25px;
+
+  border-radius: 10px;
+
+  border: 1px solid
+    rgba(56, 189, 248, 0.08);
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+
+
+  &:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+      0 10px 25px
+      rgba(0, 0, 0, 0.15);
+  }
+
+
+  h3 {
+    color: #38bdf8;
+
+    margin-bottom: 10px;
+  }
+
+
+  p {
+    color: #94a3b8;
+  }
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.skill-card {
+  padding: 35px 25px;
+
+  text-align: center;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+
+
+  &:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+      0 15px 30px
+      rgba(0, 0, 0, 0.15);
+  }
+
+
+  .skill-icon {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    color: #0f172a;
+
+    font-size: 24px;
+
+    font-weight: 700;
+  }
+
+
+  h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+  }
+
+
+  p {
+    color: #94a3b8;
+  }
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.project-container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.project-card {
+  padding: 30px;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+
+
+  &:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+      0 15px 30px
+      rgba(0, 0, 0, 0.15);
+  }
+
+
+  .project-number {
+    color: #38bdf8;
+
+    font-size: 45px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+  }
+
+
+  h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+  }
+
+
+  p {
+    color: #94a3b8;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+  }
+}
+
+
+/* =========================================================
+   PROJECT TECHNOLOGIES
+========================================================= */
+
+.project-tech {
+  display: flex;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+
+  span {
+    padding: 5px 10px;
+
+    border-radius: 4px;
+
+    background: #334155;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+}
+
+
+.contact-info {
+
+  h3 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+  }
+
+
+  p {
+    color: #94a3b8;
+
+    line-height: 1.8;
+  }
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+
+  input,
+  textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #334155;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background: #1e293b;
+
+    color: white;
+
+    transition: 0.3s;
+
+
+    &:focus {
+      border-color: #38bdf8;
+
+      box-shadow:
+        0 0 10px
+        rgba(56, 189, 248, 0.15);
+    }
+
+
+    &::placeholder {
+      color: #94a3b8;
+    }
+  }
+
+
+  button {
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #38bdf8;
+
+    color: #0f172a;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  padding: 35px 20px;
+
+  text-align: center;
+
+  transition: 0.5s;
+
+
+  h3 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+  }
+
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .home {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding-top: 130px;
+  }
+
+
+  .home-content {
+    margin: auto;
+  }
+
+
+  .home-description {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+
+  .profile-circle {
+    width: 280px;
+
+    height: 280px;
+
+
+    &::before {
+      width: 255px;
+
+      height: 255px;
+    }
+  }
+
+
+  .profile-text {
+    font-size: 75px;
+  }
+
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .skills-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 4%;
+
+
+    .logo {
+      font-size: 22px;
+    }
+
+
+    nav {
+      gap: 0;
+
+
+      button {
+        padding: 8px 6px;
+
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  .home {
+    padding-left: 5%;
+
+    padding-right: 5%;
+  }
+
+
+  .home-content {
+
+    h1 {
+      font-size: 45px;
+    }
+
+
+    h2 {
+      font-size: 24px;
+    }
+
+
+    .home-description {
+      font-size: 16px;
+    }
+  }
+
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+
+  .section {
+    padding: 80px 5%;
+  }
+
+
+  .section-title {
+
+    h2 {
+      font-size: 35px;
+    }
+  }
+
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  .profile-circle {
+    width: 250px;
+
+    height: 250px;
+
+
+    &::before {
+      width: 225px;
+
+      height: 225px;
+    }
+  }
+
+
+  .profile-text {
+    font-size: 70px;
+  }
+}

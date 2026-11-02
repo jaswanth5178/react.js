@@ -1,0 +1,46 @@
+$Red-color:red;
+$Black-color:black;
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.htmlscss{
+    height: 100vh;
+    width: 100vw;
+    @include center;
+    
+
+    form{
+    height:auto;
+    width: 350px;
+    border: 1px solid $Black-color;
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+    @include center;
+
+    input{
+        padding: 10px;
+        width: 80%;
+        &:focus{
+            outline: none;
+            border: 1px solid $Red-color;
+        }
+    }
+
+    button{
+        padding: 10px;
+        background-color: $Black-color;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        &:hover{
+        background:$Red-color
+    }
+    }
+    }
+}
+

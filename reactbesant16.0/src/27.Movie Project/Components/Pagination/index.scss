@@ -1,0 +1,19 @@
+.Pagination{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        border: 1px solid black;
+        width: 30px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        color: white;
+        border-radius: 10px;
+    }
+}

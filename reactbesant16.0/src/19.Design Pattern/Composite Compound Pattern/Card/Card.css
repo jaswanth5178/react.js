@@ -1,0 +1,71 @@
+/* Main Card */
+.Card {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Card Hover Effect */
+.Card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image */
+.Card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card Title */
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222222;
+  margin: 15px 15px 8px;
+}
+
+/* Card Price */
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #16a34a;
+  margin: 5px 15px;
+}
+
+/* Card Description */
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 8px 15px;
+}
+
+/* Card Rating */
+.rating {
+  font-size: 15px;
+  font-weight: bold;
+  color: #f59e0b;
+  margin: 8px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .Card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .Card img {
+    height: 180px;
+  }
+}

@@ -1,0 +1,21 @@
+.controls{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: black;
+  color: white;
+}
+
+
+.player-bar{
+  background: black;
+  color:white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.i-playerBar{
+  width: 100%;
+}
